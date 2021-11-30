@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Product List</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<link rel="icon" type="image/png" sizes="128x128" href="example.png">
+<link rel="icon" type="image/png" sizes="192x192" href="example.png">
+
+
+<link rel="stylesheet" type="text/css" href="product.css">
+
+<!-- link to FontAwesome-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">  
+
+<!-- link to font -->
+<link href="https://fonts.googleapis.com/css?family=Felipa" rel="stylesheet">
+
+</head>
+<body>
+<h1><i class="fab fa-product-hunt"></i> Products</h1>
+<div ng-app="products" ng-controller="list">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script  type="text/javascript" src="product.js"> </script>
+<h2 style="color:white;">{{test}}</h2>
+
+<div class="product-grid">
+
+<section class="product-bar" ng-repeat="x in products">
+<img src="{{x.img}}" />
+<h2>{{x.name}}</h2>
+<p>{{x.type}} / {{x.line}} <br> {{x.country}}</p>
+</section>
+
+</div>
+
+</body>
+</html>
